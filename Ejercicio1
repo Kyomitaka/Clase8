@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package clase8;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Aulas Heredia
+ */
+public class Clase8 {
+
+    /**
+     * @param args the command line arguments
+     */
+  
+    public static void main(String[] args) {
+       int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de registros que desea hacer"));
+       int edad[] = new int [cantidad];
+       solicitaDatos(edad);
+       imprimeDatos(edad);
+       
+    }
+    
+    public static void solicitaDatos (int vector[]){
+        for (int i = 0; i < vector.length; i++) {
+            vector[i]= Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad: " + (i+1)));
+            
+        }
+    
+    }
+    
+    public static void imprimeDatos (int vector[]){
+        for (int i = 0; i < vector.length; i++) {
+            JOptionPane.showMessageDialog(null, "La edad es " + (i+1) + ": " + vector[1]);
+        }
+    }
+}
